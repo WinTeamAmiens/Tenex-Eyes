@@ -1410,7 +1410,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 	}
 	
 	if (urlParams.has('preloadbitrate')) {
-		session.preloadbitrate = parseInt(urlParams.get('preloadbitrate')) || 0; // 1000
+		session.preloadbitrate = parseInt(urlParams.get('preloadbitrate')) || 500; // 1000
 	}
 	
 	if (urlParams.has('rampuptime')) {
@@ -3134,7 +3134,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 	}
 
 	if (urlParams.has('limittotalbitrate') || urlParams.has('ltb')){
-		session.limitTotalBitrate = urlParams.get('limittotalbitrate') || urlParams.get('ltb') || 2500;
+		session.limitTotalBitrate = urlParams.get('limittotalbitrate') || urlParams.get('ltb') || 5000;
 		session.limitTotalBitrate = parseInt(session.limitTotalBitrate);
 	}
 	
@@ -3955,13 +3955,13 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		}
 		
 		if (session.speedtest){
-			warnlog("Bitrate being throttled to max of 6000 kbps");
+			warnlog("Bitrate being throttled to max of 20000 kbps");
 			if (session.maxvideobitrate !== false) {
-				if (session.maxvideobitrate > 6000) {
-					session.maxvideobitrate = 6000; // Please feel free to get rid of this if using your own TURN servers...
+				if (session.maxvideobitrate > 20000) {
+					session.maxvideobitrate = 20000; // Please feel free to get rid of this if using your own TURN servers...
 				}
 			} else {
-				session.maxvideobitrate = 6000; // don't let people pull more than 6000 from you
+				session.maxvideobitrate = 20000; // don't let people pull more than 6000 from you
 			}
 			if (session.bitrate !== false) {
 				if (session.bitrate > 6000) {
@@ -3969,13 +3969,13 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 				}
 			}
 		} else {
-			warnlog("Bitrate being throttled to max of 4000 kbps"); 
+			warnlog("Bitrate being throttled to max of 10000 kbps"); 
 			if (session.maxvideobitrate !== false) {
-				if (session.maxvideobitrate > 4000) {
-					session.maxvideobitrate = 4000; // Please feel free to get rid of this if using your own TURN servers...
+				if (session.maxvideobitrate > 10000) {
+					session.maxvideobitrate = 10000; // Please feel free to get rid of this if using your own TURN servers...
 				}
 			} else {
-				session.maxvideobitrate = 4000; // don't let people pull more than 4000 from you
+				session.maxvideobitrate = 6000; // don't let people pull more than 4000 from you
 			}
 			if (session.bitrate !== false) {
 				if (session.bitrate > 4000) {
