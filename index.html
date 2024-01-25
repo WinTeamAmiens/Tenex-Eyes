@@ -1,5 +1,7 @@
 <html>
 	<head>
+		<script type="text/javascript" id="main-js" src="./main.js" data-translation="fr">
+		</script>
 		<script type="text/javascript">
 			//  MS Internet Explorer must not be given a chance to fail before I can give the user an error message.
 			try {
@@ -15,7 +17,6 @@
 			}
 		
 		</script>
-		<script type="text/javascript" id="main-js" src="./main.js" data-translation="fr"></script>
 		<style>
 			html {
 				background-color: #0000;
@@ -95,8 +96,8 @@
 				</span>
 			</a>
 			<div id="head1">
-				<input type="text" autocorrect="off" autocapitalize="none" id="joinroomID" name="joinroomID" size="22" placeholder="Entrer le nom de la réunion" alt="Enter a room name to join" title="Enter a room name to quick join" onkeyup="jumptoroom(event)"/>
-				<button onclick="jumptoroom();" id='jumptoroomButton' role="button" aria-pressed="false" alt="Join room" title="Join room" >Valider</button>
+				<input type="text" autocorrect="off" autocapitalize="none" id="joinroomID" name="joinroomID" size="22" placeholder="Join by Room Name here" alt="Enter a room name to join" title="Enter a room name to quick join" onkeyup="jumptoroom(event)"/>
+				<button onclick="jumptoroom();" id='jumptoroomButton' role="button" aria-pressed="false" alt="Join room" title="Join room" >GO</button>
 			</div>
 			<div id="head1a" class="hidden">
 				<input type="text" autocorrect="off" autocapitalize="none" id="joinbyURL" name="joinbyURL" size="22" placeholder="Load a website URL" alt="Enter the URL to load" title="Enter the URL to load"/>
@@ -105,7 +106,7 @@
 			<div id="head5" class="hidden"></div>
 			<div id="head3" style="display: inline-block;" class="hidden">
 				<span style="color: #888;" id="copythisurl"> &nbsp; 
-					<span data-translate="copy-this-url">Copy this URL into an OBS "Browser Source"</span> <i style="color: #CCC;" class="las la-long-arrow-alt-right"></i> &nbsp; 
+					<span data-translate="copy-this-url">Copy this URL into ??? "Browser Source"</span> <i style="color: #CCC;" class="las la-long-arrow-alt-right"></i> &nbsp; 
 				</span>
 			</div>
 			<div id="head3a" style="display: inline-block;" class="hidden">
@@ -262,15 +263,7 @@
 				>
 				<i style="cursor: pointer; color: #d9e4eb; padding: 2px; margin: 2px 2px 0 0; font-size: 140%;" class="las la-bug" aria-hidden="true"></i>
 			</span>
-			<span
-					id="helpbutton"
-					title="Show Help Info" 
-					onclick="warnUser('For support, please browse https://reddit.com/r/vdoninja or join the live chat on Discord at https://discord.vdo.ninja.\n\nThe Docs also contains many help guides and advanced settings, located at https://docs.vdo.ninja.\n\nTo access the video stats menu, hold CTRL (command) and Left-Click on a video. Most video issues can be fixed by using Wired Internet instead of Wi-Fi.')"
-					style="cursor: pointer; display:none;"
-					alt="How to Use This with OBS"
-				>
-				<i style="cursor: pointer;  color: #d9e4eb; padding: 2px; margin: 2px 2px 0 0; font-size: 140%;" class="las la-question-circle" aria-hidden="true"></i>
-			</span>
+			
 			<span title="Language Options" onclick="toggle(document.getElementById('languages'));" aria-label="language options" aria-pressed="false" id="translateButton">
 				<i style="cursor: pointer;color: #d9e4eb; padding: 2px; margin: 2px 2px 0 0; font-size: 140%;" class="las la-language" aria-hidden="true"></i>
 			</span>
@@ -374,16 +367,6 @@
 								<span data-translate="show-tips">Show me some tips..</span>
 							</button>
 							
-							<ul style="max-width: 500px; display: none; text-align: left;" class="roomnotes" id="roomnotes">
-								<span data-translate="added-notes" >
-									<i>Important Tips:</i>
-									<br><br>
-									<li>Disabling video sharing between guests will improve performance</li>
-									<li>Invite only guests to the room that you trust.</li>
-									<li>The "Recording" option is considered experimental.</li>
-									<li><a href="https://params.vdo.ninja" style="color:black;"><u>Advanced URL parameters</u></a> are available to customize rooms.</li>
-								</span>
-							</ul>
 							<br />
 							<br />
 							<i data-translate="looking-to-just-chat-and-not-direct">Looking to just chat and not direct?</i>
@@ -402,9 +385,9 @@
 						</div>
 					</div>
 			</div>
-			<div id="container-3"  title="Add your Camera" onkeyup="enterPressedClick(event,this);"  alt="Add your Camera" tabindex="3" role="button" aria-pressed="false" class="column columnfade pointer rounded card" onclick="previewWebcam()" style=" overflow-y: auto;">
+			<div id="container-3"  title="Add your Camera to OBS" onkeyup="enterPressedClick(event,this);"  alt="Add your Camera to OBS" tabindex="3" role="button" aria-pressed="false" class="column columnfade pointer rounded card" onclick="previewWebcam()" style=" overflow-y: auto;">
 				<h2 id="add_camera">
-					<span data-translate="add-your-camera">Add your Camera</span>
+					<span data-translate="add-your-camera">Add your Camera to OBS</span>
 				</h2>
 				<div class="container-inner" id="add_camera_inner">
 					<br />
@@ -579,9 +562,9 @@
 					</div>
 				</div>
 			</div>
-			<div id="container-3a"  title="Add your Microphone" onkeyup="enterPressedClick(event,this);"  alt="Add your Microphone" tabindex="3" role="button" aria-pressed="false" class="microphoneBackground column columnfade pointer rounded card hidden" onclick="previewWebcam(true)" style=" overflow-y: auto;">
+			<div id="container-3a"  title="Add your Microphone to OBS" onkeyup="enterPressedClick(event,this);"  alt="Add your Microphone to OBS" tabindex="3" role="button" aria-pressed="false" class="microphoneBackground column columnfade pointer rounded card hidden" onclick="previewWebcam(true)" style=" overflow-y: auto;">
 				<h2 id="add_microphone">
-					<span data-translate="add-your-microphone">Add your Microphone</span>
+					<span data-translate="add-your-microphone">Add your Microphone to OBS</span>
 				</h2>
 				<div class="outer close">
 					<div class="inner">
@@ -591,85 +574,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="container-2" title="Remote Screenshare" onkeyup="enterPressedClick(event,this);"  alt="Remote Screenshare"  tabindex="4" role="button" aria-pressed="false" class="column columnfade pointer rounded card" style=" overflow-y: auto;">
-				<h2 id="add_screen">
-					<span data-translate="remote-screenshare-obs">Remote Screenshare</span>
-				</h2>
-				<div class="container-inner">
-					<span>
-						<video id="screenshare" autoplay="true" muted="true" loop src="./media/screenshare.webm" class="lazy" style='background-image: unset;'></video>
-					</span>
-					<br />
-					<button class='gobutton' style="padding: 10px; font-size: 120%;animation: pulsate 2s ease-out infinite;" alt="clilck to select you screen to share" onclick="publishScreen()">
-						<span data-translate="select-screen-to-share">SELECT SCREEN TO SHARE</span>
-					</button>
-					<span id="gear_screen" style="display: inline-block; cursor: pointer;" onclick="toggle(document.getElementById('videoSettings2'));">
-						<i class="las la-cog" style="font-size: 170%; vertical-align: middle;" aria-hidden="true"></i>
-					</span>
-					<center>
-						<span id="videoSettings2" style="display: none;">
-							<form id="webcamquality2">
-								<input type="radio" id="fullhd2" name="resolution2" value="0" />
-								<label for="fullhd">
-									<span data-translate="max-resolution">1080p (hi-def)</span>
-								</label> &nbsp;&nbsp;|&nbsp;&nbsp;
-								
-								<input type="radio" checked id="halfhd2" name="resolution2" value="1" />
-								<label for="halfhd">
-									<span data-translate="balanced">720p (balanced)</span>
-								</label> &nbsp;&nbsp;|&nbsp;&nbsp;
-								
-								<input type="radio" id="nothd2" name="resolution2" value="2" />
-								<label for="nothd">
-									<span data-translate="smooth-cool">360p (smooth)</span>
-								</label>
-								<div id="webcamstats2"></div>
-							</form>
-						</span>
-					</center>
-					<div id="consentWarning2" class="startupWarning hidden">
-						<i class="las la-exclamation-circle"></i>
-						<p><span data-translate="privacy-disabled">Privacy warning: The director will be able to remotely change your camera, microphone, and URL while this page is open, if you continue.</span></p>
-					</div>
-					<div id="audioScreenShare1">
-                        <div class="title">
-                            <i class="las la-microphone-alt"></i>
-                            <span data-translate="audio-sources">Audio Sources</span>
-                        </div>
-						<select id="audioSourceScreenshare" multiple  alt="tip: Hold CTRL (command) to select Multiple" title="tip: Hold CTRL (command) to select Multiple" onchange="requestAudioStream();">
-							<option value="screenshare" selected>
-								Screen Share Audio (default)
-							</option>
-							<option value="microphones">
-								Other Audio Sources
-							</option>
-						</select>
-					</div>
-					<br />
-					<div id="headphonesDiv2">
-                        <div class="title">
-                            <i class="las la-headphones"></i>
-                            <span data-translate="select-output-source"> Audio Output Destination: <button onclick="playtone(true)" class="white" style="padding:3px 5px 2px 5px; margin:0; margin-left:15px; position: relative; " type="button">Test</button></span>
-						</div>
-                        <select id="outputSourceScreenshare" onclick="requestOutputAudioStream();">
-							<option value="default">
-								Default Device
-							</option>
-						</select>
-					</div>
-					<br />
-					<div id="audioScreenCaptureDocs" data-translate="application-audio-capture">For application-specific audio capture, <a href='https://docs.vdo.ninja/audio' target="_blank">see here</a></div>
-					<div id="audioScreenCaptureDocs2" data-translate="1080p-screen-capture-guide">For achieving 1080p60 game-capture, <a href='https://docs.vdo.ninja/guides/how-to-screen-share-in-1080p' target="_blank">see here</a></div>
-					
-				</div>
-				<div class="outer close">
-					<div class="inner">
-						<label class="labelclass">
-							<span data-translate="back">Back</span>
-						</label>
-					</div>
-				</div>
-			</div>
+			
 			<div id="container-4" tabindex="5" alt="Create Reusable Invite" onkeyup="enterPressedClick(event,this);" onclick="loadQR();" title="Create Reusable Invite" role="button" aria-pressed="false" class="column columnfade pointer rounded card" style=" overflow-y: auto;">
 				<h2>
 					<span data-translate="create-reusable-invite">Create Reusable Invite</span>
@@ -717,8 +622,8 @@
 							<div class="invite_setting_item">
 								<label for="invite_quality" data-translate="video-resolution">Target video resolution: </label>
 								<select id="invite_quality" name="invite_quality">
-									<option value="-1" selected>User selectable</option>
-									<option value="0">1080p (high-quality)</option>
+									<option value="-1">User selectable</option>
+									<option value="0" selected>1080p (high-quality)</option>
 									<option value="1">720p (balanced)</option>
 									<option value="2">360p (older computers)</option>
 								</select>
@@ -782,10 +687,7 @@
 								</span>
 							</div>
 						</div>
-						<div class="invite_setting_group_links">See the 
-							<a target="_blank" href="https://docs.vdo.ninja/advanced-settings">documentation</a> for a list of all options and details.<br /><br />
-							Try out the advanced <a target="_blank" href="https://invite.vdo.ninja/">invite generator</a> here as well.
-						</div>
+						
 					</span>
 				</div>
 				<div class="outer close">
@@ -869,6 +771,11 @@
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-tachometer-alt"></i>
 			</div>
 			
+			<div id="container-8" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './mixer.html';">
+				<h2><span data-translate="try-the-mixer-out">Custom Mixed Layouts</span></h2>
+				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-blender"></i>
+			</div>
+			
 			<div id="container-15" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './comms.html';">
 				<h2><span data-translate="voice-comms-app">Group Voice Comms</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-comments"></i>
@@ -879,29 +786,18 @@
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-book-open"></i>
 			</div>
 			
-			<div id="container-13" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://linkgen.vdo.ninja';">
-				<h2><span data-translate="wizard-link-generator">Wizard Link Generator</span></h2>
-				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-hat-wizard"></i>
-			</div>
-			
 			<div id="container-10" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://docs.vdo.ninja';">
 				<h2><span data-translate="get-full-documentation">Full Documentation</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-info"></i>
 			</div>
-						
+			
+			
+			
 			<div id="container-12" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://docs.vdo.ninja/getting-started/sponsor';">
 				<h2><span data-translate="show-your-support">Show Your Support</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-heartbeat"></i>
 			</div>
 			
-			<div id="container-17" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './whip';">
-				<h2><span data-translate="publish-via-whip">Publish via WHIP</span></h2>
-				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-broadcast-tower"></i>
-			</div>
-			
-			<div id="container-16" class="column columnfade pointer rounded card hidden" style=" overflow-y: auto;">
-				<h2><span data-translate="share-whepsrc">Share via WHEP</span></h2>
-				<i style="margin-top:30px;font-size:560%;overflow:hidden;" class="largeDarkIcon las la-broadcast-tower"></i>
 				<div class="container-inner">
 					<br />
 					<div id="previewWhepSource"></div>
@@ -935,11 +831,14 @@
 				<b>?push=xxx</b> links are for sending video, while <b>?view=xxx</b> links are for viewing.
 			</div>
 			
+			<div id="info" class="fullcolumn columnfade">
+			
+			</div>
 			<form method="post" onsubmit="setFormSubmitting()" style="display: none;">
 				<input type="submit" />
 			</form>
 			<div id="credits" class="credits">
-				<a href='https://github.com/steveseguin/vdoninja'>VDO.Ninja, by Steve Seguin</a>
+				<a href='https://github.com/steveseguin/vdoninja'>SiS EYES</a>
 			</div>
 		</div>
 		<div id="directorlayout" class="hidden directorsgrid">
@@ -976,7 +875,6 @@
 						<li>Adding &showonly=SOME_OBS_VIRTUALCAM to the guest invite links allows for only a single video to be seen by the guests; this can be output of the OBS Virtual Camera for example</li>
 						<br />
 						
-						For advanced URL options and parameters, <a href="https://docs.vdo.ninja/advanced-settings">see the Wiki.</a>
 					</span>
 				</div>
 			</div>
@@ -1341,10 +1239,7 @@
 						</div>
 					</div>
 				</div>
-				<a href="https://params.vdo.ninja" style="color:#888;" target="_blank" >
-					<div style="display: block;float:right;font-size:70%;z-index:30;bottom:6px;right:10px;position:relative;color:#888;" ><span data-translate="learn-more-about-params">Learn more about URL parameters at </span><span style="text-decoration: underline;">params.vdo.ninja</span>
-					</div>
-				</a>
+				
 			</div>
 			<div id="hiddenElements"></div>
 			<div id='guestFeeds' style="display:none">
@@ -2141,7 +2036,7 @@
 					<button data-action-type="remote-global-record" title="Record all the guests" onclick="
 						window.focus();
 						async function jjj(){
-							var bitrate = await promptAlt(miscTranslations['what-bitrate'], false, false, 6000);
+							var bitrate = await promptAlt(miscTranslations['what-bitrate'], false, 6000, 20000);
 							document.querySelectorAll('[data-action-type=\'recorder-remote\']').forEach(target=>{
 								requestVideoRecord(target, true, bitrate);
 							});
@@ -2203,10 +2098,10 @@
 				
 				<div id="advanced" style="margin: 10px 0;">
 					<select id="whipoutaudiobitrate"  title="Which audio bitrate target would you prefer?" >
-						<option value="0" selected>🎙️Default Audio Bitrate</option>
+						<option value="128">🎙️Default Audio Bitrate</option>
 						<option value="32">🎙️32-kbps</option>
 						<option value="64">🎙️64-kbps</option>
-						<option value="128">🎙️128-kbps</option>
+						<option value="128" selected>🎙️128-kbps</option>
 						<option value="256">🎙️256-kbps</option>
 					</select >
 					<select id="whipoutvbrcbr" title="Which audio bitrate target would you prefer?" >
@@ -2228,11 +2123,11 @@
 				</div>
 				<div style="margin: 10px 0px;">
 					<select  id="whipoutbitrateGroupFlag" title="Which video bitrate target would you prefer?" >
-						<option value="0" selected>🎦Default Video Bitrate</option>
+						<option value="6000">🎦Default Video Bitrate</option>
 						<option value="500">🎦500-kbps</option>
 						<option value="2500">🎦2500-kbps</option>
 						<option value="6000">🎦6000-kbps</option>
-						<option value="20000">🎦20000-kbps</option>
+						<option value="20000" selected>🎦20000-kbps</option>
 					</select >
 					<select id="whipoutcodecGroupFlag"  title="Which video codec would you prefer to be used if available?" >
 						<option value="default" selected>🎦OpenH264</option>
@@ -2269,9 +2164,7 @@
 					<span style="font-size:117%"><i class="las la-key" style="margin: 10px;"></i>Remote OBS passcode:</span>
 					<input style="margin:0 10px;display:inline-block;padding: 8px 10px 6px 10px;" placeholder="Enter the remote OBS password here" />
 				</div>
-				<small style="margin: 20px 0 0 0;display:block;" >
-					See the <a href="https://docs.vdo.ninja/advanced-settings/upcoming-parameters/and-obs" style="color:#314350; cursor:pointer;" target="_blank">documentation</a> for help on using the remote OBS controller
-				</small>
+				
 				<div id="debugRemoteOBSControl" class="hidden">
 				</div>
 			</div>
@@ -2396,9 +2289,7 @@
 		</div>
 		<div id="screenPopup" class="popup-screen">
 			<button onclick="getById('screenPopup').style.display='none';margin:0;padding:0;">Close Window</button>
-			<div>See the 
-				<a style="text-decoration: none; color: blue;" target="_blank" href="https://docs.vdo.ninja/advanced-settings">documentation</a> for more options and info.
-			</div>
+			
 		</div>
 		<div id="messagePopup" class="popup-message"></div>
 		<div id="languages" style="right: 20px; bottom: 30px; display:none;" class="popup-message" style="display: none;">
@@ -2422,9 +2313,7 @@
 				<li><a onclick="changeLg('eu');toggle(document.getElementById('languages'));" style="cursor: pointer;" data-tz="Europe/Euskara">Basque</a></li>
 				<li><a onclick="changeLg('pig');toggle(document.getElementById('languages'));" style="cursor: pointer;">Pig Latin</a></li>
 			</ul>
-			<br style="line-height: 0.3;" />
-			<i class="las la-exclamation-circle"></i><a href="https://github.com/steveseguin/vdoninja/tree/master/translations" target="_blank" rel="noopener noreferrer" data-translate='add-more-here'>Add More Here!</a>
-			<br />
+			
 		</div>
 		<div id="calendar" style="right: 20px; bottom: 30px;display:none;" class="popup-message" >
 			<b  data-translate='add-to-calendar'>Add details to your Calendar:</b>
@@ -2549,7 +2438,7 @@
 			// session.codec // default codec; maybe h264 is useful? the default is up to the browser normally
 			// session.scale // By default, scale is self-optimizing, but you can set a value of 1 to 100 to choose the playback scale of all incoming video streams
 			// session.bitrate  // int in kbps -- you can set the default max target bitrate here
-			// session.totalRoomBitrate = 500; // int, kbps -- you can set the default quality of the group room here
+			session.totalRoomBitrate = 12000; // int, kbps -- you can set the default quality of the group room here
 			// session.height // int  ; height to publish a video stream at.  Will fail if not supported by the camera
 			// session.width // int ; see above
 			// session.quality // int  -- if setting == 0, then than the default resolution will be 1080p, instead of 720p60 (q=1) , while  q=2 = 360p30.
