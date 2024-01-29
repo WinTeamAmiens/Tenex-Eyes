@@ -31283,7 +31283,7 @@ async function requestBasicPermissions(constraint = {video: true, audio: true}, 
 					if (!(session.cleanOutput)) {
 						setTimeout(function() {
 							if (window.obsstudio){
-								warnUser("Permissions denied.\n\nTo access the camera or microphone from within OBS, please refer to:\n<a href='https://docs.vdo.ninja/guides/share-webcam-from-inside-obs'>docs.vdo.ninja/guides/share-webcam-from-inside-obs</a>.", false, false);
+								warnUser("Permissions de caméra/micro refusées.\n\nPour accéder à la caméra ou au microphone, veuillez vous référer à :\n<a href='https://docs.vdo.ninja/guides/share-webcam-from-inside-obs'>docs.vdo.ninja/guides/share-webcam-from-inside-obs</a>.", false, false);
 							} else if (ChromiumVersion && !session.mobile){
 								warnUser("<h1>Permissions de caméra/micro refusées</h1>\nVeuillez vous assurer que vous avez autorisé les permissions de micro/caméra dans votre navigateur, comme ceci:\n\n<img src='./media/permissions_chrome.jpg' style='max-height:50vh;' />\n\nFor further help on how to resolve this issue, please refer to:\n\n<a target='_blank' href='https://docs.vdo.ninja/common-errors-and-known-issues/enable-camera-microphone-permissions'>https://docs.vdo.ninja/common-errors-and-known-issues/enable-camera-microphone-permissions</a>.", false, false);
 							} else if (Firefox && session.mobile){
