@@ -476,7 +476,7 @@
     "remote-screenshare-obs": "Partage d'écran à distance",
     "select-screen-to-share": "Choisir l'écran à partager",
     "audio-sources": "Sources audio",
-    "application-audio-capture": "For application-specific audio capture, <a href=\"https://docs.vdo.ninja/audio\" style=\"color: #007AC8;\">see here</a>",
+    "application-audio-capture": "Pour une capture audio spécifique à l'application, <a href=\"https://docs.vdo.ninja/audio\" style=\"color: #007AC8;\">Cliquez ici</a>",
     "create-reusable-invite": "Créer une invitation réutilisable",
     "here-you-can-pre-generate": "Ici, vous pouvez pré-générer un lien de source de navigateur réutilisable et un lien d'invitation d'invité associé.",
     "generate-invite-link": "GÉNÉRER LE LIEN D'INVITATION",
