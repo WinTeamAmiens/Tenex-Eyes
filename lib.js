@@ -6794,7 +6794,7 @@ async function jumptoroom(event = null) {
 
 		var passStr = "";
 		window.focus();
-		var pass = await promptAlt("Enter a password if provided, otherwise just click Cancel", false, true); //sanitizePassword(session.password);
+		var pass = await promptAlt("Entrez un mot de passe ou cliquez sur Annuler.", false, true); //sanitizePassword(session.password);
 		if (pass && pass.length) {
 			session.password = sanitizePassword(pass);
 			passStr = "&password=" + session.password;
