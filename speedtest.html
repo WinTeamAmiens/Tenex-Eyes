@@ -36,7 +36,7 @@
 			<ul></ul>
 		</div>
 		<div id="explanation">
-			<h2>Procédure:</h2>
+			<h2>Instructions:</h2>
 			<ol>
 				<li>Sélectionner la caméra</li>
 				<li>appuyer sur start</li>
@@ -67,7 +67,7 @@
 			</span>
 			<br />
 			<h3>Plus d'options ci dessous</h3>
-			<div id="screen" style="color: #CCC; margin:10px 0;"><a href="./speedtest?screen" style="color: #CCC;">Testez les performances du partage d'écran ici/a></div>
+			<div id="screen" style="color: #CCC; margin:10px 0;"><a href="./speedtest?screen" style="color: #CCC;">Testez les performances du partage d'écran ici</a></div>
 			<div id="remote"></div>
 			<br />
 			Localisation: <select name="turnlist" id="turnlist" onchange="reloadTurn();" title="Sélectionnez un lieu exact pour effectuer le test">
@@ -220,7 +220,7 @@
 					streamID = urlParams.get("sid");
 				}
 				
-				document.getElementById("remote").innerHTML = "<a style='color:#CCC' target='_blank' href='./monitor?sid="+streamID+"'>Remote Monitoring Link</a><br />";
+				document.getElementById("remote").innerHTML = "<a style='color:#CCC' target='_blank' href='./monitor?sid="+streamID+"'>Lien de surveillance à distance</a><br />";
 
 				var iframe = document.createElement("iframe");
 				var iframeContainer = document.createElement("span");
