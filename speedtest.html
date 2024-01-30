@@ -8,25 +8,25 @@
 	</head>
 	<body onload="loadIframe();">
 		<h1>
-			VDO.Ninja's video streaming quality test
+			Test de qualité du streaming vidéo
 		</h1>
 		<div id="container">
 		</div>
 		<div id="graphs">
 			<div class="graph">
-				<h2>Bitrate (kbps)</h2>
+				<h2>Débit (kbps)</h2>
 				<span>0</span>
 				<canvas id="bitrate-graph"></canvas>
 			</div>
 
 			<div class="graph">
-				<h2>Buffer delay (ms)</h2>
+				<h2>délai de la mémoire tampon (ms)</h2>
 				<span>0</span>
 				<canvas id="buffer-graph"></canvas>
 			</div>
 
 			<div class="graph">
-				<h2>Packet Loss (%)</h2>
+				<h2>perte de paquet (%)</h2>
 				<span>0</span>
 				<canvas id="packetloss-graph"></canvas>
 			</div>
@@ -36,30 +36,30 @@
 			<ul></ul>
 		</div>
 		<div id="explanation">
-			<h2>How to use</h2>
+			<h2>Procédure:</h2>
 			<ol>
-				<li>Select your camera.</li>
-				<li>Hit start</li>
+				<li>Sélectionner la caméra</li>
+				<li>appuyer sur start</li>
 				<li>
-					Wait for the video to load side-by-side. *If it does not auto-load within 20s, refresh and try again.*
+					Attendez que les vidéos se chargent côte à côte. *Si elle ne se charge pas automatiquement au bout de 20 secondes, rafraîchissez-la et réessayez.
 				</li>
 				<li>
-					Stats will be printed to screen, along with graphs visualizing the most important metrics. You can also hold CTRL (cmd) + Click on the video to access even more stats.
+					Les statistiques seront imprimées à l'écran, accompagnées de graphiques visualisant les mesures les plus importantes. Vous pouvez également maintenir CTRL (cmd) + cliquer sur la vidéo pour accéder à encore plus de statistiques..
 				</li>
 				<li>
-					Bitrate, Buffer delay, and packet loss are important connection	quality metrics. Monitor them for at least a minute.
+					Le débit binaire, le délai de mise en mémoire tampon et la perte de paquets sont des mesures importantes de la qualité de la connexion. Surveillez-les pendant au moins une minute.
 				</li>
 				<li>
-					Change the video bitrate by pressing the buttons below the video. It should approach 6000-kbps if the network allows.
+					Modifiez le débit vidéo en appuyant sur les boutons situés sous la vidéo. Il devrait avoisiner les 6000 kbps si le réseau le permet.
 				</li>
 				<li>
-					Good packet loss will not exceed 0.1% and bad packet loss will exceed 1%. You can try testing against different global regions with the drop-down menu below.
+					Une bonne perte de paquets ne dépassera pas 0,1 % et une mauvaise perte de paquets dépassera 1 %. Vous pouvez effectuer des tests dans différentes régions du monde à l'aide du menu déroulant ci-dessous.
 				</li>
 				<li>
-					Check out <a href="https://youtu.be/je2ljlvLzlY" target="_blank" style='color:#DEF;'>this Youtube video</a> for more details and solutions to reduce packet loss if suffering from any.
+					Vérifier <a href="https://youtu.be/je2ljlvLzlY" target="_blank" style='color:#DEF;'>cette vidéo Youtube</a> pour plus de détails et des solutions pour réduire la perte de paquets si vous en souffrez.
 				</li>
 			</ol>
-			<h2>Unsupervised guest check option</h2>
+			<h2>Option de contrôle des invités non supervisé</h2>
 			<span  style="margin:5px;line-height:32px;font-size:110%;">
 				You can also use <a target="_blank" style="color: #CCC;" href='./check.html'>this tool</a> to have a guest perform a system and connection test, with those results being available to you via a result's page for up to a week.<br />
 				You can either ask the remote guest to send you the link to their results page when they complete the test, or you can use <i style="color: #CCF;" >check.html?id=xxx</i> to pre-assign the test ID (ie: xxx), which will have the results then be available at <i style="color: #CCF;" >results.html?id=xxx</i>.
@@ -252,7 +252,7 @@
 				iframeContainer.appendChild(iframe);
 
 				var title = document.createElement("h3");
-				title.innerText = "Local video feed";
+				title.innerText = "flux vidéo local";
 				iframeContainer.appendChild(title);
 
 				var feeds = document.createElement("div");
@@ -293,7 +293,7 @@
 				iframeContainer.appendChild(iframe);
 
 				var title = document.createElement("h3");
-				title.innerText = "Server video feed";
+				title.innerText = "flux vidéo du serveur";
 				iframeContainer.appendChild(title);
 
 				document.getElementById("feeds").appendChild(iframeContainer);
@@ -305,7 +305,7 @@
 				buttonContainer.id = "controls";
 
 				var button = document.createElement("button");
-				button.innerHTML = "Low Bitrate";
+				button.innerHTML = "Bas débit";
 				button.className = "grey";
 				button.onclick = function () {
 					iframe.contentWindow.postMessage({ bitrate: 30 }, "*");
@@ -314,7 +314,7 @@
 				buttonContainer.appendChild(button);
 
 				var button = document.createElement("button");
-				button.innerHTML = "High Bitrate";
+				button.innerHTML = "Haut débit";
 				button.className = "grey";
 				button.onclick = function () {
 					iframe.contentWindow.postMessage({ bitrate: 6000 }, "*");
@@ -323,7 +323,7 @@
 				buttonContainer.appendChild(button);
 
 				var button = document.createElement("button");
-				button.innerHTML = "Default Bitrate";
+				button.innerHTML = "Débit par défaut";
 				button.className = "grey active";
 				button.onclick = function () {
 					iframe.contentWindow.postMessage({ bitrate: -1 }, "*");
