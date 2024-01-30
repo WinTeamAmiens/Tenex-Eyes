@@ -112,7 +112,17 @@
 		background: transparent; /* make scrollbar transparent */
 	}
 
-
+	.btn-back {
+		position: fixed;
+  		top: 10px;
+ 		right: 10px;
+		background-color: lightgrey;
+ 		color: black;
+  		font-size: 18px;
+  		border-radius: 5px;
+		cursor: hand;
+	}
+		
 	.xbutton{
 		float: right;
 		cursor: pointer;
@@ -941,6 +951,7 @@
 		</div>
 	</div>
 	<div id="welcomeWindow">
+		<button class="btn-back" onclick="window.location.href='index.html';">Retour à l'index</button>
 		<div class="center-content">
 			<div class="title"><h1 class="main-heading">Chat vocal de groupe</h1><h2>chat audio multi-groupes<b></b></h2></div>
 			
