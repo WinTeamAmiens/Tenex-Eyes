@@ -8,16 +8,6 @@
 */
 /*jshint esversion: 6 */
 
-const div = document.querySelector('#container-7');
-
-div.onclick = () => {
-  // Attendre que le div soit chargé
-  return Promise.resolve(div.textContent).then(() => {
-    // Rediriger
-    window.location = './speedtest.html';
-  });
-};
-
 async function main(){ // main asyncronous thread; mostly initializes the user settings.
 
 	var delayedStartupFuncs = [];
