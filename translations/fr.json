@@ -372,7 +372,7 @@
     "select-audio-source": "Sélectionner la source audio :  \n\t",
     "select-output-source": "Sélectionner la sortie audio ",
     "select-avatar-image": " Default Avatar / Placeholder Image: ",
-    "select-digital-effect": " Effets vidéo: ",
+    "select-digital-effect": "Effets vidéo: ",
     "no-effects-applied": "Pas d'effets appliqués",
     "blurred-background": "Fond flou",
     "digital-greenscreen": "Fond vert",
